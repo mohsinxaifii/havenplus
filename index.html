@@ -2,6 +2,8 @@
 <html style="font-size: 16px;" lang="en">
 
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
@@ -144,6 +146,7 @@
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      gap: 20px;
     }
 
     .about-us-images-container img {
@@ -162,14 +165,30 @@
       width: 45%;
     }
 
-    .product-container-home div {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
     .product-card-homepage {
       max-height: 640px;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #085e60;
+      border-radius: 50%;
+      padding: 15px;
+      background-size: 55%;
+    }
+
+    /* Optional: Customize the buttons themselves (container around the arrows) */
+    .carousel-control-prev,
+    .carousel-control-next {
+      filter: none;
+      background-color: transparent;
+      border: none;
+    }
+
+    /* Optional: Add hover effects for better user interaction */
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+      background-color: #064e4f;
     }
 
     .product-description-product-card__home {
@@ -1222,7 +1241,9 @@
       background-image: none;
       padding: 0;
     }
-
+.carousel-content{
+  padding: 30px;
+}
     @media (max-width: 1199px) {
       .u-section-4 .u-repeater-1 {
         grid-template-columns: repeat(3, calc(33.333333333333336% - 13.3333px));
@@ -2545,6 +2566,10 @@
         padding-right: 20px;
       }
     }
+
+    .slide {
+      width: 80%;
+    }
   </style>
 </head>
 
@@ -2599,8 +2624,45 @@
               </div>
             </div>
             <div class="about-us-images-container">
-              <img src="images/about-1.jpg">
-              <img src="images/about-2.jpg">
+              <div id="carousel4" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/gallery_1.jpeg" class="d-block w-100 product-image-homepage" alt="Image 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/gallery_2.jpeg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/gallery_3.jpeg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel4" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div id="carousel5" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/gallery_4.jpeg" class="d-block w-100 product-image-homepage" alt="Image 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/gallery_5.jpeg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel5" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel5" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -2610,17 +2672,44 @@
   <section class="u-clearfix u-container-align-center u-grey-90 u-section-4" id="shop-section-home">
     <div class="shop-home-container u-clearfix u-sheet u-valign-middle u-sheet-1">
       <h2 class="shop-home-heading" data-animation-name="customAnimationIn" data-animation-duration="500"
-        data-animation-delay="0">Grab Your HavenPlus Favourites</h2>
+        data-animation-delay="0">Our Products</h2>
       <div class="u-expanded-width u-list u-list-1">
         <div class="shop-home-products-container">
           <div
             class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
             data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
             <div class="product-container-home">
-              <img class="product-image-homepage" src="images/P-1.jpg" alt="" data-image-width="700"
-                data-image-height="560" data-animation-name="customAnimationIn" data-animation-duration="1500"
-                data-animation-delay="500">
-              <div>
+              <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/P-1.jpg" class="d-block w-100 product-image-homepage" alt="Image 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide1_2.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide1_3.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide1_4.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide1_5.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide1_6.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="carousel-content">
                 <h4 class="u-custom-font u-text u-text-4" data-animation-name="customAnimationIn"
                   data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Container Set</h4>
                 <p class="product-description-product-card__home u-text u-text-5"
@@ -2639,14 +2728,13 @@
                     Shop Now</h4>
                 </a>
               </div>
-
             </div>
           </div>
           <div
             class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
             data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
             <div class="product-container-home ">
-              <div>
+              <div class="carousel-content">
                 <h4 class="u-custom-font u-text u-text-6" data-animation-name="customAnimationIn"
                   data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Glass Container Set</h4>
                 <p class="product-description-product-card__home" data-animation-name="customAnimationIn"
@@ -2664,19 +2752,73 @@
                     Shop Now</h4>
                 </a>
               </div>
-              <img class="product-image-homepage" src="images/P-3.jpg" alt="" data-image-width="700"
-                data-image-height="560" data-animation-name="customAnimationIn" data-animation-duration="1500"
-                data-animation-delay="500">
+              <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/P-3.jpg" class="d-block w-100 product-image-homepage" alt="Image 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide2_2.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide2_3.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide2_4.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide2_5.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide2_6.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
           </div>
           <div
             class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
             data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
             <div class="product-container-home">
-              <img class="product-image-homepage " src="images/P-2.jpg" alt="" data-image-width="700"
-                data-image-height="560" data-animation-name="customAnimationIn" data-animation-duration="1500"
-                data-animation-delay="500">
-              <div>
+              <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/P-2.jpg" class="d-block w-100 product-image-homepage" alt="Image 1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide3_2.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide3_3.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide3_4.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide3_5.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/slide3_6.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <div class="carousel-content">
                 <h4 class="u-custom-font u-text u-text-2" data-animation-name="customAnimationIn"
                   data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Glass Container</h4>
                 <p class="product-description-product-card__home" data-animation-name="customAnimationIn"

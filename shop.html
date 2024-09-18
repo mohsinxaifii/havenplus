@@ -2,6 +2,8 @@
 <html style="font-size: 16px;" lang="en">
 
 <head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
@@ -60,6 +62,36 @@
       gap: 20px;
     }
 
+    .carousel-content {
+      padding: 30px;
+    }
+
+    .slide {
+      width: 80%;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #085e60;
+      border-radius: 50%;
+      padding: 15px;
+      background-size: 55%;
+    }
+
+    /* Optional: Customize the buttons themselves (container around the arrows) */
+    .carousel-control-prev,
+    .carousel-control-next {
+      filter: none;
+      background-color: transparent;
+      border: none;
+    }
+
+    /* Optional: Add hover effects for better user interaction */
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+      background-color: #064e4f;
+    }
+
     .shop-now-button-product-card {
       font-size: 1.3rem;
       padding: 13px 50px !important;
@@ -71,7 +103,7 @@
 
     .shop-home-heading {
       color: #084243 !important;
-      margin-bottom: 50px !important;
+      margin-bottom: 10px !important;
     }
 
     .product-container-home {
@@ -80,6 +112,8 @@
 
     .shop-section-shop-page {
       display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .contact-form__container h2 {
@@ -207,12 +241,6 @@
       aspect-ratio: 1 / 1;
       height: auto !important;
       width: 45%;
-    }
-
-    .product-container-home div {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
     }
 
     .product-card-homepage {
@@ -2611,98 +2639,181 @@
   </header>
 
   <section class="shop-section-shop-page" id="shop-section-home">
-    <div class="shop-home-container u-clearfix u-sheet u-valign-middle u-sheet-1">
-      <h2 class="shop-home-heading" data-animation-name="customAnimationIn" data-animation-duration="500"
-        data-animation-delay="0">Grab Your HavenPlus Favourites</h2>
-      <div class="u-expanded-width u-list u-list-1">
-        <div class="shop-home-products-container">
-          <div
-            class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
-            data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-            <div class="product-container-home">
-              <img class="product-image-homepage" src="images/P-1.jpg" alt="" data-image-width="700"
-                data-image-height="560" data-animation-name="customAnimationIn" data-animation-duration="1500"
-                data-animation-delay="500">
-              <div>
-                <h4 class="u-custom-font u-text u-text-4" data-animation-name="customAnimationIn"
-                  data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Container Set</h4>
-                <p class="product-description-product-card__home u-text u-text-5"
-                  data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                  HavenPlus Food Vacuum Container Set with Pump
-                  and Built-in Date Indicator, 3
-                  pcs Re-usable Food Containers, Airtight Plastic Storage, 500ml, 1000ml, 2000ml
-                  <br>
-                </p>
-                <a
-                  href="https://www.amazon.ae/HavenPlus-Container-Indicator-Re-usable-Containers/dp/B0CRYS6Q8G/ref=sr_1_2?crid=30N1IHV3UATXO&dib=eyJ2IjoiMSJ9.2AnlWI-Xj2Jts1B6tm0pITkK48m8dR2EiSXNUTvZGIIUQ_rZWGV7LnqMzrcZKFsn.FzF1jSZnzbhPPAY1yVul1d2V4Ib-iRwnxEc2XXsqLuk&dib_tag=se&keywords=havenplus&qid=1719306362&sprefix=havenplus%2Caps%2C184&sr=8-2">
-                  <h4 style="  
-                color: #fff; border:solid 1px #fff; padding:1rem 2rem; border-radius: 100px;"
-                    class="shop-now-button-product-card u-custom-font u-text u-text-2"
+    <section class="u-clearfix u-container-align-center u-section-4" id="shop-section-home">
+      <div class="shop-home-container u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <h2 class="shop-home-heading" data-animation-name="customAnimationIn" data-animation-duration="500"
+          data-animation-delay="0">Our Products</h2>
+        <div class="u-expanded-width u-list u-list-1">
+          <div class="shop-home-products-container">
+            <div
+              class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
+              data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+              <div class="product-container-home">
+                <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/P-1.jpg" class="d-block w-100 product-image-homepage" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide1_2.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide1_3.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide1_4.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide1_5.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide1_6.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="carousel-content">
+                  <h4 class="u-custom-font u-text u-text-4" data-animation-name="customAnimationIn"
+                    data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Container Set</h4>
+                  <p class="product-description-product-card__home u-text u-text-5"
                     data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    Shop Now</h4>
-                </a>
-              </div>
+                    HavenPlus Food Vacuum Container Set with Pump
+                    and Built-in Date Indicator, 3
+                    pcs Re-usable Food Containers, Airtight Plastic Storage, 500ml, 1000ml, 2000ml
+                    <br>
+                  </p>
+                  <a
+                    href="https://www.amazon.ae/HavenPlus-Container-Indicator-Re-usable-Containers/dp/B0CRYS6Q8G/ref=sr_1_2?crid=30N1IHV3UATXO&dib=eyJ2IjoiMSJ9.2AnlWI-Xj2Jts1B6tm0pITkK48m8dR2EiSXNUTvZGIIUQ_rZWGV7LnqMzrcZKFsn.FzF1jSZnzbhPPAY1yVul1d2V4Ib-iRwnxEc2XXsqLuk&dib_tag=se&keywords=havenplus&qid=1719306362&sprefix=havenplus%2Caps%2C184&sr=8-2">
+                    <h4 style="  
+                  color: #085e60; border:solid 1px #fff; padding:1rem 2rem; border-radius: 100px;"
+                      class="shop-now-button-product-card u-custom-font u-text u-text-2"
+                      data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                      Shop Now</h4>
+                  </a>
+                </div>
 
-            </div>
-          </div>
-          <div
-            class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
-            data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-            <div class="product-container-home ">
-              <div>
-                <h4 class="u-custom-font u-text u-text-6" data-animation-name="customAnimationIn"
-                  data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Glass Container Set</h4>
-                <p class="product-description-product-card__home" data-animation-name="customAnimationIn"
-                  data-animation-duration="1500" data-animation-delay="500"> HavenPlus Food Vacuum Glass Container Set
-                  with Automatic and Manual Pump,
-                  Built-in Date Indicator, 3 pcs Glass Food Containers, Rectangular Airtight Storage, 630ml, 1040ml,
-                  1480ml
-                </p>
-                <a
-                  href="https://www.amazon.ae/HavenPlus-Container-Automatic-Containers-Rectangular/dp/B0CRZ2PC6H/ref=sr_1_1?crid=30N1IHV3UATXO&dib=eyJ2IjoiMSJ9.2AnlWI-Xj2Jts1B6tm0pITkK48m8dR2EiSXNUTvZGIIUQ_rZWGV7LnqMzrcZKFsn.FzF1jSZnzbhPPAY1yVul1d2V4Ib-iRwnxEc2XXsqLuk&dib_tag=se&keywords=havenplus&qid=1719306362&sprefix=havenplus%2Caps%2C184&sr=8-1">
-                  <h4 style="   
-                color: #fff; border:solid 1px #fff; padding:1rem 2rem; border-radius: 100px;"
-                    class="shop-now-button-product-card u-custom-font u-text u-text-2"
-                    data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    Shop Now</h4>
-                </a>
               </div>
-              <img class="product-image-homepage" src="images/P-3.jpg" alt="" data-image-width="700"
-                data-image-height="560" data-animation-name="customAnimationIn" data-animation-duration="1500"
-                data-animation-delay="500">
             </div>
-          </div>
-          <div
-            class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
-            data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-            <div class="product-container-home">
-              <img class="product-image-homepage " src="images/P-2.jpg" alt="" data-image-width="700"
-                data-image-height="560" data-animation-name="customAnimationIn" data-animation-duration="1500"
-                data-animation-delay="500">
-              <div>
-                <h4 class="u-custom-font u-text u-text-2" data-animation-name="customAnimationIn"
-                  data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Glass Container</h4>
-                <p class="product-description-product-card__home" data-animation-name="customAnimationIn"
-                  data-animation-duration="1500" data-animation-delay="500">
-                  HavenPlus Food Vacuum Glass Container Set
-                  with Automatic and Manual Pump,
-                  Built-in Date Indicator, 3 pcs Glass Food Containers, Round Airtight Storage, 635ml, 930ml, 1400ml
+            <div
+              class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
+              data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+              <div class="product-container-home ">
+                <div class="carousel-content">
+                  <h4 class="u-custom-font u-text u-text-6" data-animation-name="customAnimationIn"
+                    data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Glass Container Set</h4>
+                  <p class="product-description-product-card__home" data-animation-name="customAnimationIn"
+                    data-animation-duration="1500" data-animation-delay="500"> HavenPlus Food Vacuum Glass Container Set
+                    with Automatic and Manual Pump,
+                    Built-in Date Indicator, 3 pcs Glass Food Containers, Rectangular Airtight Storage, 630ml, 1040ml,
+                    1480ml
+                  </p>
+                  <a
+                    href="https://www.amazon.ae/HavenPlus-Container-Automatic-Containers-Rectangular/dp/B0CRZ2PC6H/ref=sr_1_1?crid=30N1IHV3UATXO&dib=eyJ2IjoiMSJ9.2AnlWI-Xj2Jts1B6tm0pITkK48m8dR2EiSXNUTvZGIIUQ_rZWGV7LnqMzrcZKFsn.FzF1jSZnzbhPPAY1yVul1d2V4Ib-iRwnxEc2XXsqLuk&dib_tag=se&keywords=havenplus&qid=1719306362&sprefix=havenplus%2Caps%2C184&sr=8-1">
+                    <h4 style="   
+                  color: #085e60; border:solid 1px #fff; padding:1rem 2rem; border-radius: 100px;"
+                      class="shop-now-button-product-card u-custom-font u-text u-text-2"
+                      data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                      Shop Now</h4>
+                  </a>
+                </div>
+                <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/P-3.jpg" class="d-block w-100 product-image-homepage" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide2_2.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide2_3.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide2_4.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide2_5.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide2_6.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="product-card-homepage u-container-style u-list-item u-radius-25 u-repeater-item u-shape-round u-video-cover u-white u-list-item-2"
+              data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+              <div class="product-container-home">
+                <div id="carousel3" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img src="images/P-2.jpg" class="d-block w-100 product-image-homepage" alt="Image 1">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide3_2.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide3_3.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide3_4.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide3_5.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                    <div class="carousel-item">
+                      <img src="images/slide3_6.jpg" class="d-block w-100 product-image-homepage" alt="Image 2">
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carousel3" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel3" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+                <div class="carousel-content">
+                  <h4 class="u-custom-font u-text u-text-2" data-animation-name="customAnimationIn"
+                    data-animation-duration="1500" data-animation-delay="500">HavenPlus Vacuum Glass Container</h4>
+                  <p class="product-description-product-card__home" data-animation-name="customAnimationIn"
+                    data-animation-duration="1500" data-animation-delay="500">
+                    HavenPlus Food Vacuum Glass Container Set
+                    with Automatic and Manual Pump,
+                    Built-in Date Indicator, 3 pcs Glass Food Containers, Round Airtight Storage, 635ml, 930ml, 1400ml
 
-                </p>
-                <a
-                  href="https://www.amazon.ae/HavenPlus-Container-Automatic-Indicator-Containers/dp/B0CRZ4SGHB/ref=sr_1_3?crid=30N1IHV3UATXO&dib=eyJ2IjoiMSJ9.2AnlWI-Xj2Jts1B6tm0pITkK48m8dR2EiSXNUTvZGIIUQ_rZWGV7LnqMzrcZKFsn.FzF1jSZnzbhPPAY1yVul1d2V4Ib-iRwnxEc2XXsqLuk&dib_tag=se&keywords=havenplus&qid=1719306362&sprefix=havenplus%2Caps%2C184&sr=8-3">
-                  <h4 style="   
-            color: #fff; border:solid 1px #fff; padding:1rem 2rem; border-radius: 100px;"
-                    class="shop-now-button-product-card u-custom-font u-text u-text-2"
-                    data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
-                    Shop Now</h4>
-                </a>
+                  </p>
+                  <a
+                    href="https://www.amazon.ae/HavenPlus-Container-Automatic-Indicator-Containers/dp/B0CRZ4SGHB/ref=sr_1_3?crid=30N1IHV3UATXO&dib=eyJ2IjoiMSJ9.2AnlWI-Xj2Jts1B6tm0pITkK48m8dR2EiSXNUTvZGIIUQ_rZWGV7LnqMzrcZKFsn.FzF1jSZnzbhPPAY1yVul1d2V4Ib-iRwnxEc2XXsqLuk&dib_tag=se&keywords=havenplus&qid=1719306362&sprefix=havenplus%2Caps%2C184&sr=8-3">
+                    <h4 style="   
+              color: #085e60; border:solid 1px #fff; padding:1rem 2rem; border-radius: 100px;"
+                      class="shop-now-button-product-card u-custom-font u-text u-text-2"
+                      data-animation-name="customAnimationIn" data-animation-duration="1500" data-animation-delay="500">
+                      Shop Now</h4>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </section>
 
   <footer id="footer-section-home" class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-fb23">
